@@ -1,0 +1,40 @@
+:root{
+  --bg:#0c1526;
+  --panel:#121e35;
+  --line:#243456;
+  --text:#e8edf7;
+  --text-dim:#8ea0c2;
+  --amber:#e8a33d;
+  --teal:#5fd4c6;
+  --danger:#e2645f;
+}
+*{box-sizing:border-box;}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:'Segoe UI', Arial, sans-serif;
+  margin:0; padding:40px 24px;
+}
+.wrap{ max-width:880px; margin:0 auto; }
+h1{ font-size:26px; margin-bottom:4px; }
+.subtitle{ color:var(--text-dim); font-size:14px; margin-bottom:28px; }
+.top-row{ display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+.btn{
+  display:inline-block; background:var(--amber); color:#0c1526; font-weight:600;
+  padding:10px 16px; border-radius:4px; text-decoration:none; border:none; cursor:pointer; font-size:14px;
+}
+.btn.secondary{ background:transparent; border:1px solid var(--line); color:var(--text); }
+.btn.danger{ background:var(--danger); color:#fff; }
+table{ width:100%; border-collapse:collapse; background:var(--panel); border-radius:6px; overflow:hidden; }
+th, td{ text-align:left; padding:12px 14px; border-bottom:1px solid var(--line); font-size:14px; }
+th{ color:var(--text-dim); font-size:12px; text-transform:uppercase; letter-spacing:0.05em; }
+tr.low-stock{ background:rgba(226,100,95,0.08); }
+.badge{ font-size:11px; padding:3px 8px; border-radius:10px; background:rgba(226,100,95,0.18); color:var(--danger); }
+.qty-form{ display:flex; gap:6px; align-items:center; }
+.qty-form input{ width:60px; padding:6px; border-radius:4px; border:1px solid var(--line); background:#0c1526; color:var(--text); }
+.alert{
+  background:rgba(232,163,61,0.1); border:1px solid rgba(232,163,61,0.4); color:var(--amber);
+  padding:12px 16px; border-radius:6px; margin-bottom:20px; font-size:14px;
+}
+form.card{ background:var(--panel); padding:24px; border-radius:6px; max-width:420px; }
+form.card label{ display:block; font-size:13px; color:var(--text-dim); margin:14px 0 6px; }
+form.card input{ width:100%; padding:9px; border-radius:4px; border:1px solid var(--line); background:#0c1526; color:var(--text); }

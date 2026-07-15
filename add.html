@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Item — Inventory Tracker</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="wrap">
+  <h1>Add Item</h1>
+  <div class="subtitle"><a href="{{ url_for('index') }}" style="color:#5fd4c6;">← Back to inventory</a></div>
+  <form class="card" method="POST">
+    <label>Item Name</label>
+    <input type="text" name="name" required>
+    <label>Category</label>
+    <input type="text" name="category" placeholder="e.g. Produce, Dairy, Pantry">
+    <label>Starting Quantity</label>
+    <input type="number" name="quantity" min="0" required>
+    <label>Reorder Threshold</label>
+    <input type="number" name="reorder_threshold" min="0" required>
+    <div style="margin-top:20px;">
+      <button class="btn" type="submit">Add Item</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>
